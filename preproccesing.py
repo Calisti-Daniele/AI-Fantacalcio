@@ -21,7 +21,8 @@ df[numerical_cols] = df[numerical_cols].apply(pd.to_numeric, errors='coerce')
 # Step 3: Aggiungi una colonna 'migliore' che etichetta i migliori giocatori
 df['migliore'] = 0
 df.loc[(df['role'] == 'P') & (df['fanta_media'] >= 5) & (df['partite_valide'] >= 30) & (df['goal_subiti'] <= 47) & (df['ammonizioni'] <= 2), 'migliore'] = 1
-df.loc[(df['role'] != 'P') & (df['fanta_media'] >= 5.5) & (df['partite_valide'] >= 16) & (df['goal_fatti'] >= 4) & (df['assist'] >= 2) & (df['ammonizioni'] <= 3), 'migliore'] = 1
+df.loc[(df['role'] == 'D') & (df['fanta_media'] >= 5.5) & (df['partite_valide'] >= 16) & (df['goal_fatti'] >= 2) & (df['assist'] >= 2) & (df['ammonizioni'] <= 6), 'migliore'] = 1
+df.loc[(df['role'] != 'P') & (df['role'] != 'D') & (df['fanta_media'] >= 5.5) & (df['partite_valide'] >= 16) & (df['goal_fatti'] >= 4) & (df['assist'] >= 2) & (df['ammonizioni'] <= 3), 'migliore'] = 1
 
 # Step 4: Identificare la stagione più recente
 # Manteniamo la colonna 'stagione' come stringa
