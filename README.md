@@ -1,8 +1,4 @@
-Ecco un esempio di README accattivante per il tuo progetto di Machine Learning sulle statistiche di fantacalcio:
-
----
-
-# ⚽ Fantasy Football Dream Team Builder
+# ⚽ Fantacalcio Team Prediction
 
 Un progetto di **Machine Learning** che analizza le statistiche del fantacalcio dal 2017 al 2023 per costruire la squadra ideale per la stagione corrente! 🚀
 
@@ -25,13 +21,6 @@ Il dataset include statistiche dal 2017 al 2023 per ogni giocatore, comprese:
 - `rigori_parati` (Rigori parati)
 - ... e altre metriche ⚽
 
-## 🛠️ Preprocessing dei Dati
-
-Nel preprocessing, il dataset è stato:
-
-1. 💾 **Pulito**: I valori mancanti sono stati gestiti.
-2. 📊 **Normalizzato**: Le statistiche numeriche sono state scalate tra 0 e 1 per una migliore performance del modello.
-3. 🏷️ **Verificato**: Sono state incluse tutte le colonne essenziali come `role` e `name`.
 
 ### 📂 Come usare il dataset preprocessato
 
@@ -53,31 +42,31 @@ Il modello di machine learning utilizza le statistiche preprocessate per costrui
 1. Clona il repository:
 
    ```bash
-   git clone https://github.com/tuo-username/fantasy-football-team-builder.git
+   git clone https://github.com/Calisti-Daniele/AI-Fantacalcio.git
    ```
 
 2. Installa le dipendenze:
 
    ```bash
-   pip install -r requirements.txt
+      pip install pandas numpy sklearn matplotlib
    ```
 
 3. Esegui il preprocessing dei dati:
 
    ```bash
-   python preprocess_data.py
+      python preprocessing.py
    ```
 
 4. Allena il modello:
 
    ```bash
-   python train_model.py
+      python training.py
    ```
 
 5. Ottieni la squadra ideale per la stagione corrente:
 
    ```bash
-   python build_team.py
+      python predict.py
    ```
 
 ## 🔧 Tecnologie utilizzate
