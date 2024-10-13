@@ -1,3 +1,7 @@
+Ecco il README aggiornato in entrambe le lingue, con il nome corretto del progetto:
+
+---
+
 # ⚽ Fantacalcio Team Prediction
 
 Un progetto di **Machine Learning** che analizza le statistiche del fantacalcio dal 2017 al 2023 per costruire la squadra ideale per la stagione corrente! 🚀
@@ -21,6 +25,13 @@ Il dataset include statistiche dal 2017 al 2023 per ogni giocatore, comprese:
 - `rigori_parati` (Rigori parati)
 - ... e altre metriche ⚽
 
+## 🛠️ Preprocessing dei Dati
+
+Nel preprocessing, il dataset è stato:
+
+1. 💾 **Pulito**: I valori mancanti sono stati gestiti.
+2. 📊 **Normalizzato**: Le statistiche numeriche sono state scalate tra 0 e 1 per una migliore performance del modello.
+3. 🏷️ **Verificato**: Sono state incluse tutte le colonne essenziali come `role` e `name`.
 
 ### 📂 Come usare il dataset preprocessato
 
@@ -48,25 +59,25 @@ Il modello di machine learning utilizza le statistiche preprocessate per costrui
 2. Installa le dipendenze:
 
    ```bash
-      pip install pandas numpy sklearn matplotlib
+   pip install pandas scikit-learn numpy matplotlib
    ```
 
 3. Esegui il preprocessing dei dati:
 
    ```bash
-      python preprocessing.py
+   python preprocess_data.py
    ```
 
 4. Allena il modello:
 
    ```bash
-      python training.py
+   python train_model.py
    ```
 
 5. Ottieni la squadra ideale per la stagione corrente:
 
    ```bash
-      python predict.py
+   python build_team.py
    ```
 
 ## 🔧 Tecnologie utilizzate
@@ -89,4 +100,108 @@ Sentiti libero di creare una **pull request** o aprire una **issue** se hai sugg
 
 ## 📬 Contatti
 
-Per qualsiasi domanda o collaborazione, puoi contattarmi vall'email daniele.calisti03@gmail.com o aprire una issue direttamente su GitHub! 😊
+Per qualsiasi domanda o collaborazione, puoi contattarmi via email a ```daniele.calisti03@gmail.com``` o aprire una issue direttamente su GitHub! 😊
+
+---
+
+# ⚽ Fantacalcio Team Prediction (English Version)
+
+A **Machine Learning** project that analyzes fantasy football stats from 2017 to 2023 to build the ideal team for the current season! 🚀
+
+## 🎯 Goals
+
+This project aims to create a model that selects the best players to form the perfect fantasy football team. Based on stats like goals, assists, yellow cards, and more, the algorithm optimizes the choice of goalkeeper, defenders, midfielders, and forwards to achieve the best possible score.
+
+## 📈 Dataset
+
+The dataset includes statistics from 2017 to 2023 for each player, including:
+
+- `role` (Player's role)
+- `name` (Player's name)
+- `team` (Team)
+- `win_matches` (Matches won)
+- `media` (Average rating)
+- `fanta_media` (Fantasy rating)
+- `goal_scored` (Goals scored)
+- `goal_subiti` (Goals conceded)
+- `rigori_parati` (Penalties saved)
+- ... and other key metrics ⚽
+
+## 🛠️ Data Preprocessing
+
+In the preprocessing step, the dataset was:
+
+1. 💾 **Cleaned**: Missing values were handled.
+2. 📊 **Normalized**: Numerical statistics were scaled between 0 and 1 for better model performance.
+3. 🏷️ **Verified**: All essential columns like `role` and `name` were included.
+
+### 📂 How to Use the Preprocessed Dataset
+
+The preprocessed dataset is saved in a CSV file and is ready to be used in the machine learning model.
+
+```bash
+dataset_statistiche_preprocessed.csv
+```
+
+## 🧠 Machine Learning Model
+
+The machine learning model uses the preprocessed stats to build the ideal team for the current season. It optimizes the following metrics:
+
+- **Goalkeepers**: Maximize fanta_media, minimize goals conceded.
+- **Defenders, Midfielders, Forwards**: Maximize goals, assists, and minimize yellow cards, red cards, and own goals.
+
+## 🚀 How to Run the Project
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Calisti-Daniele/AI-Fantacalcio.git
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   pip install pandas scikit-learn numpy matplotlib
+   ```
+
+3. Run the data preprocessing:
+
+   ```bash
+   python preprocess_data.py
+   ```
+
+4. Train the model:
+
+   ```bash
+   python train_model.py
+   ```
+
+5. Get the ideal team for the current season:
+
+   ```bash
+   python build_team.py
+   ```
+
+## 🔧 Technologies Used
+
+- **Python** 🐍
+- **Pandas** 🐼
+- **Scikit-learn** 🧠
+- **NumPy** 🔢
+- **Matplotlib** 📊
+
+## 🚀 Future Goals
+
+- Improve the team selection algorithm with advanced optimization techniques.
+- Integrate a web interface to display the results interactively.
+- Add new features to the dataset, like yellow/red cards received by players.
+
+## 💡 Contributions
+
+Feel free to submit a **pull request** or open an **issue** if you have suggestions or ideas to improve the project! ✨
+
+## 📬 Contact
+
+For any questions or collaboration, feel free to reach out via email at ```daniele.calisti03@gmail.com``` or open an issue directly on GitHub! 😊
+
+---
